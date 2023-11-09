@@ -7,8 +7,9 @@ name = "pypi"
 requests = "*"
 python-dotenv = "*"
 pandas ="*"
+openpyxl = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.10"
+python_version = "3.11"
