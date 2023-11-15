@@ -14,17 +14,15 @@ for filepath in filepaths:
 
     filename = Path(filepath).stem
     invoice_nb = filename.split("-")[0]
-    date = invoice_nb = filename.split("-")[1]
-    #invoice_nb, date = invoice_nb = filename.split("-")
+    # date, invoice_nb = filename.split("-")[1]
+    invoice_nb, date = filename.split("-")
 
 
     pdf.set_font(family="Times",size=16,style="B")
     pdf.cell(w=50, h=8, txt=f"Invoice nb.{invoice_nb}", ln=1)
 
-
-
     pdf.set_font(family="Times",size=16,style="B")
-    pdf.cell(w=50, h=8, txt=f"Invoice nb.{date}", ln=1)
+    pdf.cell(w=50, h=8, txt=f"Date: {date}", ln=1)
 
     df = pd.read_excel(filepath, sheet_name="Sheet 1")
 
